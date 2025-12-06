@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Әбілмансур: Секретный Архив</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Базовые стили */
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #1A1A1A; /* Темно-серый фон */
+            color: #E0E0E0; /* Светлый текст */
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* --- Геройский Блок --- */
+        .hero {
+            background-color: #222222; /* Фон блока */
+            padding: 60px 0;
+            text-align: center;
+            border-bottom: 5px solid #E9B34A; /* Винтажный желтый/охра */
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            color: #E0E0E0;
+            letter-spacing: 2px;
+        }
+
+        .hero-subtitle {
+            font-size: 1.6rem;
+            color: #B85C5C; /* Приглушенный красный акцент */
+        }
+
+        /* --- Секция Легенд и Досье --- */
+        .section {
+            padding: 40px 0;
+        }
+
+        h3 {
+            font-size: 2rem;
+            color: #E9B34A; /* Желтый заголовок */
+            text-align: center;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            border-bottom: 2px solid #333;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        /* Карточка истории (Досье) */
+        .story-card {
+            background-color: #222222;
+            border-radius: 4px;
+            padding: 20px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+            border: 1px solid #333;
+            border-left: 5px solid #B85C5C; /* Акцентная линия досье */
+        }
+
+        .story-card h4 {
+            font-size: 1.5rem;
+            color: #B85C5C;
+            margin-bottom: 8px;
+            text-decoration: underline;
+            text-decoration-color: #333;
+        }
+        
+        /* --- Секция Досье (Фото и Детали) --- */
+        .dossier-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        /* СТИЛИ ДЛЯ ФОТО 2:3 (ВОССТАНОВЛЕНИЕ ПРОПОРЦИЙ) */
+        .dossier-photo {
+            /* Контейнер для фиксации пропорций 2:3 */
+            position: relative;
+            padding-bottom: 150%; /* Высота = 150% от ширины (3/2) */
+            height: 0;
+            overflow: hidden;
+            border-radius: 4px; 
+            border: 3px solid #E9B34A; /* Желтая рамка */
+        }
+
+        .dossier-photo img {
+            /* Изображение абсолютно позиционировано и заполняет контейнер */
+            position: absolute; 
+            top: 0; 
+            left: 0; 
+            width: 100%;
+            height: 100%;
+            object-fit: cover; 
+            border-radius: 0; /* Граница теперь на контейнере */
+        }
+
+        .dossier-info {
+            background-color: #222222;
+            padding: 20px;
+            border-radius: 4px;
+            grid-column: span 2; 
+            border: 1px dashed #555; /* Пунктирная граница для эффекта "заметки" */
+        }
+
+        .dossier-info ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .dossier-info li {
+            margin-bottom: 8px;
+        }
+
+        .dossier-info strong {
+            color: #E9B34A;
+        }
+        
+        /* --- Футер --- */
+        .footer {
+            background-color: #222222;
+            padding: 15px 0;
+            text-align: center;
+            color: #888888;
+        }
+
+        /* Медиазапросы */
+        @media (max-width: 768px) {
+             .dossier-grid {
+                grid-template-columns: 1fr;
+            }
+            .dossier-info { 
+                grid-column: span 1; 
+            }
+            .hero-title { font-size: 2.5rem; }
+            .hero-subtitle { font-size: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="hero">
+        <div class="container">
+            <h1 class="hero-title">ӘБІЛМАНСУР</h1>
+            <p class="hero-subtitle">16 лет? Легенда не имеет возраста.</p>
+        </div>
+    </section>
+
+    <section id="stories" class="section">
+        <div class="container">
+            <h3>Хроники великих свершений</h3>
+            
+            <div class="story-card">
+                <h4>🐲 Повелитель Драконов</h4>
+                <p>Многие знают, что питомец Әбілмансура это дракон. Но мало кто знает что зовут его Алижан. Он не просто питомец, а транспортное средство. В 14 лет Әбілмансур лично приручил огнедышащего Алижана во время летних каникул на горе Котак. С тех пор они летают по всему миру, избегая радаров ВМС (о которых речь пойдет ниже).</p>
+            </div>
+
+            <div class="story-card">
+                <h4>⚓️ Герой Военно-Морских Сил</h4>
+                <p>В свои 16 лет Әбілмансур уже имеет звание Главного Капитана. В 10 лет он поступил на службу в ВМС РК (Военно-Морские Силы Республики Казахстан), где прослужил целых два года. Был уволен после того как во время учений по ошибке запустил торпеду в ресторан "Макдоналдс" на берегу. Вся его карьера была засекречена, но именно он изобрел соус "Биг Тейсти" для подводных лодок.</p>
+            </div>
+
+            <div class="story-card">
+                <h4>💋 Темное Прошлое</h4>
+                <p>В юности Әбілмансур некоторое время работал эскортницей, но не из-за денег а из за скуки. Его задача была сопровождать мировых лидеров на саммитах G20. Он был так хорош в этом, что президент одной большой страны предложил ему пост министра экономики. Әбілмансур отказался, заявив, что "ему еще надо с Алижаном на тренировку".</p>
+            </div>
+            
+            <div class="story-card">
+                <h4>🔮 Сверхспособность "Бабушкин Счет"</h4>
+                <p>Его настоящая сверхспособность это способность убеждать кого угодно, что "деньги на бабушкином счету" это его личный инвестиционный фонд. Этим трюком он финансирует свои военные операции, топливо для Алижана и покупку редких видов кириешек. Финансовые аналитики мира до сих пор не могут разгадать его гениальную схему.</p>
+            </div>
+            
+        </div>
+    </section>
+
+    <section id="dossier" class="section">
+        <div class="container">
+            <h3>Персональное Досье</h3>
+            
+            <div class="dossier-grid">
+                
+                <div class="dossier-photo"><img src="phhoto.jpg" alt="Фотография Әбілмансура 1"></div>
+                <div class="dossier-photo"><img src="photo2..png" alt="Фотография Әбілмансура 2"></div>
+                
+                <div class="dossier-info">
+                    <h4>Основные Факты:</h4>
+                    <ul>
+                        <li><strong>Полное Имя:</strong> Әбілмансур (Кличка: Шлюха)</li>
+                        <li><strong>Возраст:</strong> 16 лет (по земному исчислению)</li>
+                        <li><strong>Профессия:</strong> Ветеран ВМС РК, Финансист, Повелитель Драконов, Дворник, Сутинер</li>
+                        <li><strong>Питомец:</strong> Дракон Алижан (уровень опасности: 99%)</li>
+                        <li><strong>Кредо:</strong> "Никогда не сдавайся, если можно списать на бабушку."</li>
+                    </ul>
+                </div>
+
+                <div class="dossier-photo"><img src="photo3.png" alt="Фотография Әбілмансура 3"></div>
+                <div class="dossier-photo"><img src="photo4.png" alt="Фотография Әбілмансура 4"></div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025. Секретные Архивы Капитана Әбілмансура. Данные не подлежат разглашению.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
